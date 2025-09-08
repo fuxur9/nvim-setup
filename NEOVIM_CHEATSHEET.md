@@ -78,13 +78,31 @@
 
 ## 🪟 Window Management
 
+### Window Splits
+
 | Key          | Action             | Description                |
 | ------------ | ------------------ | -------------------------- |
 | `<leader>sv` | Split vertically   | Split window vertically    |
 | `<leader>sh` | Split horizontally | Split window horizontally  |
 | `<leader>se` | Equal splits       | Make splits equal size     |
 | `<leader>sx` | Close split        | Close current split window |
-| `<leader>sm` | Maximize toggle    | Maximize/minimize split    |
+
+### Terminal
+
+| Key           | Action                    | Description                       |
+| ------------- | ------------------------- | --------------------------------- |
+| `<leader>teh` | Terminal horizontal split | Open terminal in horizontal split |
+| `<leader>tev` | Terminal vertical split   | Open terminal in vertical split   |
+| `<leader>tet` | Terminal current window   | Open terminal in current window   |
+| `<leader>ten` | Terminal new tab          | Open terminal in new tab          |
+
+### Terminal Control
+
+| Key          | Action         | Description                     |
+| ------------ | -------------- | ------------------------------- |
+| `Ctrl+\`     | Exit terminal  | Exit terminal mode to normal    |
+| `exit`       | Close terminal | Close terminal session          |
+| `<leader>tx` | Close tab      | Close current tab (if terminal) |
 
 ---
 
@@ -201,6 +219,18 @@
 ---
 
 ## 🎨 Code Editing
+
+### Visual Mode & Copying
+
+| Key  | Action       | Description                        |
+| ---- | ------------ | ---------------------------------- |
+| `v`  | Visual mode  | Select text character by character |
+| `V`  | Line visual  | Select entire lines                |
+| `y`  | Copy (yank)  | Copy selected text                 |
+| `p`  | Paste after  | Paste after cursor                 |
+| `P`  | Paste before | Paste before cursor                |
+| `yy` | Copy line    | Copy entire current line           |
+| `Y`  | Copy line    | Copy entire current line           |
 
 ### Comments
 
@@ -320,11 +350,16 @@
 ## ⚙️ Key Configuration Notes
 
 1. **Leader Key:** Space bar
-2. **Auto-formatting:** Enabled on save for supported file types
-3. **LSP Servers:** Auto-installed via Mason
-4. **File Types Supported:** JavaScript, TypeScript, React, Svelte, Python, Lua, HTML, CSS, JSON, YAML, Markdown, GraphQL, and more
-5. **Session Management:** Auto-session with directory-based sessions
-6. **Git Integration:** Full git workflow support with visual indicators
+2. **Line Wrapping:** Enabled (`wrap = true`) - long lines wrap instead of extending beyond screen
+3. **File Explorer:** Width set to 25 characters (customizable in nvim-tree.lua)
+4. **Terminal Size:** Horizontal splits resize to 10 lines, vertical splits to 30 characters
+5. **Auto-formatting:** Enabled on save for supported file types
+6. **LSP Servers:** Auto-installed via Mason
+7. **File Types Supported:** JavaScript, TypeScript, React, Svelte, Python, Lua, HTML, CSS, JSON, YAML, Markdown, GraphQL, and more
+8. **Session Management:** Auto-session with directory-based sessions (uses `AutoSession restore` command)
+9. **Git Integration:** Full git workflow support with visual indicators
+10. **Buffer Management:** Auto-close buffers when files are closed from nvim-tree explorer
+11. **Clipboard Integration:** System clipboard integration enabled (`clipboard:append("unnamedplus")`)
 
 ---
 

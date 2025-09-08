@@ -29,6 +29,7 @@ keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }
 keymap.set("n", "<leader>teh", "<cmd>split | resize 10 | terminal<CR>", { desc = "Open terminal in horizontal split" })
 keymap.set("n", "<leader>tev", "<cmd>vsplit | vertical resize 30 | terminal<CR>", { desc = "Open terminal in vertical split" })
 keymap.set("n", "<leader>tet", "<cmd>terminal<CR>", { desc = "Open terminal in current window" })
+keymap.set("n", "<leader>ten", "<cmd>tabnew | terminal<CR>", { desc = "Open terminal in new tab" })
 
 -- Buffer management (works with bufferline)
 keymap.set("n", "<leader>bo", "<cmd>enew<CR>", { desc = "Open new buffer" }) -- open new buffer
